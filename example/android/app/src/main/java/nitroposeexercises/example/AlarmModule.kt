@@ -55,7 +55,7 @@ class AlarmModule(private val rc: ReactApplicationContext) : ReactContextBaseJav
     if (Build.VERSION.SDK_INT < 33) { promise.resolve(true); return }
     val granted = ContextCompat.checkSelfPermission(rc, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
     if (!granted) {
-      val act = currentActivity
+      val act: android.app.Activity? = rc.currentActivity
       if (act != null) ActivityCompat.requestPermissions(act, arrayOf(Manifest.permission.POST_NOTIFICATIONS), 9001)
     }
     promise.resolve(granted)
