@@ -17,7 +17,7 @@ export const LEG_RAISE_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'kneesBending',
-      message: 'Keep your legs straight',
+      message: "Mantén las piernas rectas",
       severity: 'warning',
       angleName: 'leftKnee',
       minAngle: 160,
@@ -25,7 +25,7 @@ export const LEG_RAISE_CONFIG: ExerciseConfig = {
     },
     {
       name: 'lowerBackLifting',
-      message: 'Press your lower back into the floor',
+      message: "Pega la zona lumbar al suelo",
       severity: 'warning',
       angleName: 'leftHip',
       minAngle: 50,

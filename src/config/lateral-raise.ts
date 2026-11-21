@@ -39,7 +39,7 @@ export const LATERAL_RAISE_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'elbowBending',
-      message: "Keep a slight bend — don't fully bend your elbows",
+      message: "Mantén una leve flexión: no dobles del todo los codos",
       severity: 'warning',
       angleName: 'leftElbow',
       minAngle: 150,
@@ -47,7 +47,7 @@ export const LATERAL_RAISE_CONFIG: ExerciseConfig = {
     },
     {
       name: 'raisingTooHigh',
-      message: "Stop at shoulder height — don't go above",
+      message: "Detente a la altura de los hombros: no subas más",
       severity: 'info',
       angleName: 'leftShoulderAbduction',
       minAngle: 5,

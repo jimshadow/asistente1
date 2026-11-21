@@ -18,7 +18,7 @@ export const WARRIOR_III_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'standingLegBent',
-      message: 'Straighten your standing leg',
+      message: "Estira la pierna de apoyo",
       severity: 'warning',
       angleName: 'standingLeg',
       minAngle: 165,
@@ -26,7 +26,7 @@ export const WARRIOR_III_CONFIG: ExerciseConfig = {
     },
     {
       name: 'raisedLegLow',
-      message: 'Lift your back leg parallel to the floor',
+      message: "Eleva la pierna de atrás paralela al suelo",
       severity: 'info',
       angleName: 'raisedLeg',
       minAngle: 155,
@@ -34,7 +34,7 @@ export const WARRIOR_III_CONFIG: ExerciseConfig = {
     },
     {
       name: 'armsNotExtended',
-      message: 'Reach your arms forward',
+      message: "Estira los brazos hacia delante",
       severity: 'info',
       angleName: 'arms',
       minAngle: 160,

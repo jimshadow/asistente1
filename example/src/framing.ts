@@ -18,10 +18,11 @@ export interface FramingStatus {
 
 export function getFramingStatus(
   landmarks: Landmark[] | null | undefined,
-  requiredView: 'side' | 'front'
+  requiredView: 'side' | 'front',
+  postureFamily: string = 'none'
 ): FramingStatus {
   if (!landmarks || landmarks.length < 33) {
-    return { ready: false, issue: 'noPerson', message: 'Step into frame' };
+    return { ready: false, issue: 'noPerson', message: 'Entra en el encuadre' };
   }
 
   const ls = landmarks[11];
@@ -30,7 +31,7 @@ export function getFramingStatus(
   const rw = landmarks[16];
 
   if (!ls || !rs || ls.visibility < 0.2 || rs.visibility < 0.2) {
-    return { ready: false, issue: 'noPerson', message: 'Step into frame' };
+    return { ready: false, issue: 'noPerson', message: 'Entra en el encuadre' };
   }
 
   const shoulderDx = Math.abs(ls.x - rs.x);
@@ -41,16 +42,16 @@ export function getFramingStatus(
     return {
       ready: false,
       issue: 'offCenter',
-      message: midX < 0.5 ? 'Move right' : 'Move left',
+      message: midX < 0.5 ? 'Muévete a la derecha' : 'Muévete a la izquierda',
     };
   }
 
   // Camera angle
   if (requiredView === 'side' && shoulderDx > 0.25) {
-    return { ready: false, issue: 'wrongAngle', message: 'Turn sideways' };
+    return { ready: false, issue: 'wrongAngle', message: 'Colócate de lado respecto a la cámara' };
   }
   if (requiredView === 'front' && shoulderDx < 0.05) {
-    return { ready: false, issue: 'wrongAngle', message: 'Face the camera' };
+    return { ready: false, issue: 'wrongAngle', message: 'Colócate de frente a la cámara' };
   }
 
   // Distance: shoulders must span at least 12% of frame for front-facing
@@ -58,12 +59,12 @@ export function getFramingStatus(
     return {
       ready: false,
       issue: 'tooFar',
-      message: 'Move closer to the camera',
+      message: 'Acércate un poco a la cámara',
     };
   }
 
   // Plank-vs-standing: wrists should be below shoulders for floor exercises
-  if (requiredView === 'front' && lw && rw) {
+  if (requiredView === 'front' && postureFamily === 'horizontalProne' && lw && rw) {
     const wristsVisible = lw.visibility > 0.2 && rw.visibility > 0.2;
     if (wristsVisible) {
       const wristY = (lw.y + rw.y) / 2;
@@ -72,11 +73,11 @@ export function getFramingStatus(
         return {
           ready: false,
           issue: 'standing',
-          message: 'Get into push-up position',
+          message: 'Colócate en posición en el suelo',
         };
       }
     }
   }
 
-  return { ready: true, issue: null, message: 'Ready' };
+  return { ready: true, issue: null, message: 'Listo' };
 }

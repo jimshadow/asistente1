@@ -49,7 +49,7 @@ export const LUNGE_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'kneeOverToe',
-      message: "Don't let your front knee go past your toes",
+      message: "No dejes que la rodilla delantera pase de las puntas",
       severity: 'warning',
       angleName: 'frontKnee',
       minAngle: 75,
@@ -57,7 +57,7 @@ export const LUNGE_CONFIG: ExerciseConfig = {
     },
     {
       name: 'torsoLean',
-      message: 'Keep your torso upright',
+      message: "Mantén el torso erguido",
       severity: 'warning',
       angleName: 'torsoAngle',
       minAngle: 75,

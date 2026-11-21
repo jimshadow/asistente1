@@ -19,7 +19,7 @@ export const SUMO_SQUAT_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'kneesNotTracking',
-      message: 'Push knees out over your toes',
+      message: "Abre las rodillas en dirección a las puntas de los pies",
       severity: 'warning',
       angleName: 'leftKnee',
       minAngle: 50,
@@ -27,7 +27,7 @@ export const SUMO_SQUAT_CONFIG: ExerciseConfig = {
     },
     {
       name: 'leaningForward',
-      message: 'Keep your torso upright',
+      message: "Mantén el torso erguido",
       severity: 'warning',
       angleName: 'hipAngle',
       minAngle: 80,

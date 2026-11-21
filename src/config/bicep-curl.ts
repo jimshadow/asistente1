@@ -48,7 +48,7 @@ export const BICEP_CURL_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'elbowFlare',
-      message: 'Keep your elbows pinned to your sides',
+      message: "Mantén los codos pegados al cuerpo",
       severity: 'warning',
       angleName: 'leftShoulder',
       minAngle: 0,
@@ -56,7 +56,7 @@ export const BICEP_CURL_CONFIG: ExerciseConfig = {
     },
     {
       name: 'swinging',
-      message: "Don't swing — control the movement",
+      message: "No te balancees: controla el movimiento",
       severity: 'error',
       angleName: 'leftShoulder',
       minAngle: 0,

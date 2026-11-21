@@ -16,7 +16,7 @@ export const BOW_POSE_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'kneesTooWide',
-      message: 'Keep your knees hip-width apart',
+      message: "Separa las rodillas al ancho de la cadera",
       severity: 'warning',
       angleName: 'kneeAngle',
       minAngle: 50,

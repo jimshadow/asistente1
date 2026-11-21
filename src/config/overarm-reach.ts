@@ -38,7 +38,7 @@ export const OVERARM_REACH_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'elbowsBending',
-      message: 'Keep your arms straight',
+      message: "Mantén los brazos rectos",
       severity: 'warning',
       angleName: 'leftElbow',
       minAngle: 160,

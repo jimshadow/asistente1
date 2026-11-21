@@ -18,7 +18,7 @@ export const SIDE_LUNGE_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'straightLegBending',
-      message: 'Keep your other leg straight',
+      message: "Mantén la otra pierna recta",
       severity: 'warning',
       angleName: 'straightLeg',
       minAngle: 160,
@@ -26,7 +26,7 @@ export const SIDE_LUNGE_CONFIG: ExerciseConfig = {
     },
     {
       name: 'leaningForward',
-      message: 'Keep your chest up',
+      message: "Mantén el pecho alto",
       severity: 'warning',
       angleName: 'torso',
       minAngle: 70,

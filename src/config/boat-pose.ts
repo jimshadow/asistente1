@@ -17,7 +17,7 @@ export const BOAT_POSE_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'backRounding',
-      message: "Lengthen your spine — don't round your back",
+      message: "Alarga la columna: no redondees la espalda",
       severity: 'warning',
       angleName: 'hipFlexion',
       minAngle: 60,
@@ -25,7 +25,7 @@ export const BOAT_POSE_CONFIG: ExerciseConfig = {
     },
     {
       name: 'legsDropping',
-      message: 'Keep your legs lifted',
+      message: "Mantén las piernas elevadas",
       severity: 'warning',
       angleName: 'kneeAngle',
       minAngle: 150,

@@ -18,7 +18,7 @@ export const TRIANGLE_POSE_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'frontKneeBending',
-      message: 'Keep your front leg straight',
+      message: "Mantén la pierna delantera recta",
       severity: 'warning',
       angleName: 'frontLeg',
       minAngle: 160,
@@ -26,7 +26,7 @@ export const TRIANGLE_POSE_CONFIG: ExerciseConfig = {
     },
     {
       name: 'backKneeBending',
-      message: 'Straighten your back leg',
+      message: "Estira la pierna de atrás",
       severity: 'warning',
       angleName: 'backLeg',
       minAngle: 160,

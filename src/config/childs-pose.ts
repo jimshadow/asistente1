@@ -15,7 +15,7 @@ export const CHILDS_POSE_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'notRelaxing',
-      message: 'Relax into the pose — let your forehead rest',
+      message: "Relájate en la postura: apoya la frente",
       severity: 'info',
       angleName: 'hipFold',
       minAngle: 30,

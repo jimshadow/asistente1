@@ -39,7 +39,7 @@ export const FRONT_RAISE_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'elbowBending',
-      message: 'Keep your arms straight — slight bend only',
+      message: "Mantén los brazos casi rectos, con una leve flexión",
       severity: 'warning',
       angleName: 'leftElbow',
       minAngle: 155,
@@ -47,7 +47,7 @@ export const FRONT_RAISE_CONFIG: ExerciseConfig = {
     },
     {
       name: 'tooHigh',
-      message: 'Stop at shoulder height',
+      message: "Sube solo hasta la altura de los hombros",
       severity: 'info',
       angleName: 'leftShoulderFlexion',
       minAngle: 0,

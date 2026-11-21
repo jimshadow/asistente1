@@ -17,7 +17,7 @@ export const SIDE_PLANK_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'hipDrop',
-      message: 'Lift your hips — keep your body in a straight line',
+      message: "Sube la cadera: mantén el cuerpo en línea recta",
       severity: 'warning',
       angleName: 'hipLateral',
       minAngle: 155,

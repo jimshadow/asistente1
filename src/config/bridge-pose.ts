@@ -17,7 +17,7 @@ export const BRIDGE_POSE_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'hipsLow',
-      message: 'Push your hips up higher',
+      message: "Sube más la cadera",
       severity: 'warning',
       angleName: 'hipExtension',
       minAngle: 140,

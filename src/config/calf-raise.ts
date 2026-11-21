@@ -19,7 +19,7 @@ export const CALF_RAISE_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'kneesBending',
-      message: 'Keep your legs straight',
+      message: "Mantén las piernas rectas",
       severity: 'warning',
       angleName: 'leftKnee',
       minAngle: 165,

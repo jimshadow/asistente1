@@ -56,7 +56,7 @@ export const WARRIOR_II_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'frontKneeTooStraight',
-      message: 'Bend your front knee deeper — stack it over your ankle',
+      message: "Flexiona más la rodilla delantera: colócala sobre el tobillo",
       severity: 'warning',
       angleName: 'frontKnee',
       minAngle: 80,
@@ -64,7 +64,7 @@ export const WARRIOR_II_CONFIG: ExerciseConfig = {
     },
     {
       name: 'backLegBent',
-      message: 'Straighten your back leg fully',
+      message: "Estira por completo la pierna de atrás",
       severity: 'warning',
       angleName: 'backLeg',
       minAngle: 160,
@@ -72,7 +72,7 @@ export const WARRIOR_II_CONFIG: ExerciseConfig = {
     },
     {
       name: 'leftArmDrooping',
-      message: 'Extend your arms out fully — keep them level',
+      message: "Extiende los brazos del todo y mantenlos a la misma altura",
       severity: 'info',
       angleName: 'leftArm',
       minAngle: 160,
@@ -80,7 +80,7 @@ export const WARRIOR_II_CONFIG: ExerciseConfig = {
     },
     {
       name: 'rightArmDrooping',
-      message: 'Extend your back arm out fully',
+      message: "Extiende por completo el brazo de atrás",
       severity: 'info',
       angleName: 'rightArm',
       minAngle: 160,

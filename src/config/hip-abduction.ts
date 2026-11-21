@@ -17,7 +17,7 @@ export const HIP_ABDUCTION_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'leaningOver',
-      message: "Keep your torso upright — don't lean",
+      message: "Mantén el torso erguido: no te inclines",
       severity: 'warning',
       angleName: 'standingLeg',
       minAngle: 165,

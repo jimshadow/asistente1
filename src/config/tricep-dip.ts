@@ -49,8 +49,7 @@ export const TRICEP_DIP_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'goingTooDeep',
-      message:
-        "Don't go too deep — stop at 90 degrees to protect your shoulders",
+      message: "No bajes tanto: detente a 90 grados para proteger los hombros",
       severity: 'error',
       angleName: 'leftElbow',
       minAngle: 55,

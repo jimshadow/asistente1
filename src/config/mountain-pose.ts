@@ -17,7 +17,7 @@ export const MOUNTAIN_POSE_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'slouching',
-      message: 'Stand tall — lengthen your spine',
+      message: "Mantente alto: alarga la columna",
       severity: 'info',
       angleName: 'hipAngle',
       minAngle: 170,
@@ -25,7 +25,7 @@ export const MOUNTAIN_POSE_CONFIG: ExerciseConfig = {
     },
     {
       name: 'shouldersTense',
-      message: 'Relax your shoulders down',
+      message: "Relaja y baja los hombros",
       severity: 'info',
       angleName: 'shoulderAlignment',
       minAngle: 5,

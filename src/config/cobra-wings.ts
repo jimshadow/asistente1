@@ -18,7 +18,7 @@ export const COBRA_WINGS_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'legsLifting',
-      message: 'Keep your legs on the ground',
+      message: "Mantén las piernas en el suelo",
       severity: 'warning',
       angleName: 'hipExtension',
       minAngle: 110,

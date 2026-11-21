@@ -17,7 +17,7 @@ export const FISH_POSE_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'legsNotStraight',
-      message: 'Keep your legs straight and together',
+      message: "Mantén las piernas rectas y juntas",
       severity: 'info',
       angleName: 'legs',
       minAngle: 165,

@@ -17,7 +17,7 @@ export const GLUTE_BRIDGE_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'hipsNotHigh',
-      message: 'Squeeze your glutes — push hips higher',
+      message: "Aprieta los glúteos: sube más la cadera",
       severity: 'warning',
       angleName: 'hipExtension',
       minAngle: 150,
@@ -25,7 +25,7 @@ export const GLUTE_BRIDGE_CONFIG: ExerciseConfig = {
     },
     {
       name: 'kneesTooWide',
-      message: 'Keep knees hip-width apart',
+      message: "Separa las rodillas al ancho de la cadera",
       severity: 'info',
       angleName: 'kneeAngle',
       minAngle: 75,

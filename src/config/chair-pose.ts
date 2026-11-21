@@ -43,7 +43,7 @@ export const CHAIR_POSE_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'kneesTooStraight',
-      message: 'Sit deeper — bend your knees more',
+      message: "Baja más: flexiona más las rodillas",
       severity: 'warning',
       angleName: 'leftKnee',
       minAngle: 90,
@@ -51,7 +51,7 @@ export const CHAIR_POSE_CONFIG: ExerciseConfig = {
     },
     {
       name: 'leaningForward',
-      message: "Keep your chest lifted — don't lean too far forward",
+      message: "Mantén el pecho alto: no te inclines tanto hacia delante",
       severity: 'warning',
       angleName: 'leftHip',
       minAngle: 70,
@@ -59,7 +59,7 @@ export const CHAIR_POSE_CONFIG: ExerciseConfig = {
     },
     {
       name: 'armsNotUp',
-      message: 'Reach your arms up overhead',
+      message: "Estira los brazos hacia arriba",
       severity: 'info',
       angleName: 'leftArm',
       minAngle: 160,

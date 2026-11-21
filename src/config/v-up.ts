@@ -18,7 +18,7 @@ export const V_UP_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'kneesBending',
-      message: 'Keep your legs straight — reach for your toes',
+      message: "Mantén las piernas rectas: alcanza las puntas de los pies",
       severity: 'warning',
       angleName: 'leftKnee',
       minAngle: 155,

@@ -50,7 +50,7 @@ export const WARRIOR_I_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'frontKneeTooStraight',
-      message: 'Bend your front knee deeper — aim for 90 degrees',
+      message: "Flexiona más la rodilla delantera: busca 90 grados",
       severity: 'warning',
       angleName: 'frontKnee',
       minAngle: 80,
@@ -58,7 +58,7 @@ export const WARRIOR_I_CONFIG: ExerciseConfig = {
     },
     {
       name: 'backLegBent',
-      message: 'Keep your back leg straight and strong',
+      message: "Mantén la pierna de atrás recta y firme",
       severity: 'warning',
       angleName: 'backLeg',
       minAngle: 155,
@@ -66,7 +66,7 @@ export const WARRIOR_I_CONFIG: ExerciseConfig = {
     },
     {
       name: 'armsNotExtended',
-      message: 'Reach your arms up fully — straighten your elbows',
+      message: "Estira los brazos hacia arriba: codos rectos",
       severity: 'info',
       angleName: 'leftArm',
       minAngle: 160,
@@ -74,7 +74,7 @@ export const WARRIOR_I_CONFIG: ExerciseConfig = {
     },
     {
       name: 'torsoLeaning',
-      message: 'Keep your torso upright over your hips',
+      message: "Mantén el torso erguido sobre la cadera",
       severity: 'warning',
       angleName: 'torso',
       minAngle: 80,

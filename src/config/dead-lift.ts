@@ -19,7 +19,7 @@ export const DEADLIFT_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'roundedBack',
-      message: "Keep your back straight — don't round your spine",
+      message: "Mantén la espalda recta: no redondees la columna",
       severity: 'error',
       angleName: 'leftHip',
       minAngle: 50,
@@ -27,7 +27,7 @@ export const DEADLIFT_CONFIG: ExerciseConfig = {
     },
     {
       name: 'kneesTooForward',
-      message: 'Push your hips back — knees stay behind toes',
+      message: "Lleva la cadera hacia atrás: las rodillas no pasan de las puntas",
       severity: 'warning',
       angleName: 'leftKnee',
       minAngle: 140,

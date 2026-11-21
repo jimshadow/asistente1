@@ -43,7 +43,7 @@ export const SITUP_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'neckStrain',
-      message: "Don't pull on your neck — lead with your chest",
+      message: "No tires del cuello: sube llevando el pecho",
       severity: 'warning',
       angleName: 'leftHip',
       minAngle: 30,

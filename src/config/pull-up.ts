@@ -19,7 +19,7 @@ export const PULL_UP_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'kipping',
-      message: 'Control the movement — no swinging',
+      message: "Controla el movimiento: sin balanceo",
       severity: 'warning',
       angleName: 'leftShoulder',
       minAngle: 0,

@@ -43,7 +43,7 @@ export const WALL_SIT_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'tooHigh',
-      message: 'Sit lower — your thighs should be parallel to the ground',
+      message: "Baja más: los muslos deben quedar paralelos al suelo",
       severity: 'warning',
       angleName: 'leftKnee',
       minAngle: 80,
@@ -51,7 +51,7 @@ export const WALL_SIT_CONFIG: ExerciseConfig = {
     },
     {
       name: 'leaningForward',
-      message: 'Press your back flat against the wall',
+      message: "Pega toda la espalda a la pared",
       severity: 'warning',
       angleName: 'leftHip',
       minAngle: 80,

@@ -17,7 +17,7 @@ export const REVERSE_WARRIOR_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'frontKneeStraight',
-      message: 'Bend your front knee deeper',
+      message: "Flexiona más la rodilla delantera",
       severity: 'warning',
       angleName: 'frontKnee',
       minAngle: 80,
@@ -25,7 +25,7 @@ export const REVERSE_WARRIOR_CONFIG: ExerciseConfig = {
     },
     {
       name: 'backLegBent',
-      message: 'Keep your back leg strong and straight',
+      message: "Mantén la pierna de atrás firme y recta",
       severity: 'warning',
       angleName: 'backLeg',
       minAngle: 160,

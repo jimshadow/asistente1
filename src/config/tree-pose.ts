@@ -43,7 +43,7 @@ export const TREE_POSE_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'standingLegBent',
-      message: 'Straighten your standing leg',
+      message: "Estira la pierna de apoyo",
       severity: 'warning',
       angleName: 'standingLeg',
       minAngle: 165,
@@ -51,7 +51,7 @@ export const TREE_POSE_CONFIG: ExerciseConfig = {
     },
     {
       name: 'leaningTorso',
-      message: 'Keep your torso straight and centered',
+      message: "Mantén el torso recto y centrado",
       severity: 'warning',
       angleName: 'torso',
       minAngle: 160,

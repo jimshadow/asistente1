@@ -55,7 +55,7 @@ export const SHOULDER_PRESS_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'backArch',
-      message: "Keep your core tight — don't arch your back",
+      message: "Aprieta el abdomen: no arquees la espalda",
       severity: 'warning',
       angleName: 'leftShoulderAngle',
       minAngle: 80,

@@ -55,7 +55,7 @@ export const SQUAT_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'kneesCaving',
-      message: 'Push your knees out over your toes',
+      message: "Abre las rodillas en dirección a las puntas de los pies",
       severity: 'warning',
       angleName: 'leftKnee',
       minAngle: 40,
@@ -63,7 +63,7 @@ export const SQUAT_CONFIG: ExerciseConfig = {
     },
     {
       name: 'leaningForward',
-      message: "Keep your torso upright — don't lean too far forward",
+      message: "Mantén el torso erguido: no te inclines tanto hacia delante",
       severity: 'warning',
       angleName: 'leftHip',
       minAngle: 70,

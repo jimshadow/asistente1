@@ -18,7 +18,7 @@ export const KNEE_RAISE_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'leaningBack',
-      message: "Stay upright — don't lean back",
+      message: "Mantente erguido: no te inclines hacia atrás",
       severity: 'warning',
       angleName: 'torso',
       minAngle: 160,

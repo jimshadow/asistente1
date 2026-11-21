@@ -17,7 +17,7 @@ export const EXTENDED_SIDE_ANGLE_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'backLegBent',
-      message: 'Straighten your back leg',
+      message: "Estira la pierna de atrás",
       severity: 'warning',
       angleName: 'backLeg',
       minAngle: 160,
@@ -25,7 +25,7 @@ export const EXTENDED_SIDE_ANGLE_CONFIG: ExerciseConfig = {
     },
     {
       name: 'topArmBent',
-      message: 'Extend your top arm fully',
+      message: "Extiende por completo el brazo de arriba",
       severity: 'info',
       angleName: 'topArm',
       minAngle: 160,

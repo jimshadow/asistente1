@@ -44,7 +44,7 @@ export const DOWNWARD_DOG_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'armsBent',
-      message: 'Straighten your arms — push the floor away',
+      message: "Estira los brazos: empuja el suelo",
       severity: 'warning',
       angleName: 'leftArm',
       minAngle: 160,
@@ -52,7 +52,7 @@ export const DOWNWARD_DOG_CONFIG: ExerciseConfig = {
     },
     {
       name: 'legsBent',
-      message: 'Straighten your legs — press your heels toward the ground',
+      message: "Estira las piernas: baja los talones hacia el suelo",
       severity: 'info',
       angleName: 'leftLeg',
       minAngle: 155,
@@ -60,7 +60,7 @@ export const DOWNWARD_DOG_CONFIG: ExerciseConfig = {
     },
     {
       name: 'hipsTooLow',
-      message: 'Push your hips up higher toward the ceiling',
+      message: "Sube la cadera hacia el techo",
       severity: 'warning',
       angleName: 'hipAngle',
       minAngle: 55,

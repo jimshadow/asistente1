@@ -43,7 +43,7 @@ export const PLANK_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'hipSag',
-      message: 'Hips are dropping — tighten your core',
+      message: "La cadera se hunde: aprieta el abdomen",
       severity: 'warning',
       angleName: 'leftHip',
       minAngle: 155,
@@ -51,7 +51,7 @@ export const PLANK_CONFIG: ExerciseConfig = {
     },
     {
       name: 'hipPike',
-      message: "Lower your hips — you're piking up",
+      message: "Baja la cadera: la estás subiendo demasiado",
       severity: 'warning',
       angleName: 'leftHip',
       minAngle: 155,

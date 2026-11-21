@@ -43,7 +43,7 @@ export const COBRA_POSE_CONFIG: ExerciseConfig = {
   formRules: [
     {
       name: 'shouldersTensed',
-      message: 'Relax your shoulders away from your ears',
+      message: "Relaja los hombros, aléjalos de las orejas",
       severity: 'info',
       angleName: 'leftElbow',
       minAngle: 140,
@@ -51,7 +51,7 @@ export const COBRA_POSE_CONFIG: ExerciseConfig = {
     },
     {
       name: 'legsBending',
-      message: 'Keep your legs straight and pressed into the floor',
+      message: "Mantén las piernas rectas y apoyadas en el suelo",
       severity: 'warning',
       angleName: 'legStraight',
       minAngle: 160,
