@@ -1,0 +1,53 @@
+{
+  "name": "react-native-nitro-pose-exercises",
+  "version": "0.1.0",
+  "description": "Deteccion de pose y conteo de repeticiones para React Native (Nitro Modules + MediaPipe en Android, Apple Vision en iOS)",
+  "main": "src/index.tsx",
+  "module": "src/index.tsx",
+  "types": "src/index.tsx",
+  "react-native": "src/index.tsx",
+  "source": "src/index.tsx",
+  "files": [
+    "src",
+    "react-native.config.js",
+    "nitrogen",
+    "nitro.json",
+    "android/build.gradle",
+    "android/gradle.properties",
+    "android/fix-prefab.gradle",
+    "android/CMakeLists.txt",
+    "android/src",
+    "ios/**/*.swift",
+    "*.podspec"
+  ],
+  "scripts": {
+    "specs": "nitrogen",
+    "typecheck": "tsc --noEmit",
+    "example": "npm --prefix example"
+  },
+  "keywords": [
+    "react-native",
+    "nitro",
+    "pose",
+    "mediapipe",
+    "fitness",
+    "vision-camera"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-nitro-modules": "*",
+    "react-native-vision-camera": ">=5.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "nitrogen": "0.37.2",
+    "react": "19.3.0",
+    "react-native": "0.88.1",
+    "react-native-nitro-image": "0.15.2",
+    "react-native-nitro-modules": "0.37.2",
+    "react-native-vision-camera": "5.2.4",
+    "typescript": "^6.0.3"
+  }
+}
