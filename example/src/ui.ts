@@ -6,7 +6,7 @@ export const C = {
 };
 
 export const ui = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: C.bg, paddingTop: 36 },
+  screen: { flex: 1, backgroundColor: C.bg },
   header: { paddingHorizontal: 16, paddingBottom: 8 },
   h1: { color: C.txt, fontSize: 26, fontWeight: '800' },
   h2: { color: C.txt, fontSize: 18, fontWeight: '700', marginBottom: 6 },
@@ -38,7 +38,7 @@ export const ui = StyleSheet.create({
   stepValSm: { color: C.txt, fontSize: 24, fontWeight: '800', minWidth: 70, textAlign: 'center' },
   label: { color: C.sub, fontSize: 13, marginTop: 10, marginBottom: 4 },
   // entrenamiento
-  fullDark: { flex: 1, backgroundColor: C.bg, padding: 16, paddingTop: 44 },
-  hero: { width: '100%', aspectRatio: 1.6, borderRadius: 16, backgroundColor: '#eef6f7', marginVertical: 12 },
+  fullDark: { padding: 16 },
+  
   bigNum: { color: C.txt, fontSize: 72, fontWeight: '900', textAlign: 'center' },
 });

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
-import { View, Text, TouchableOpacity, Image } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { useCameraDevice, useCameraPermission } from 'react-native-vision-camera';
 import {
   nitroPoseExercises,
@@ -10,6 +10,7 @@ import { styles } from './camera-styles';
 import { getFramingStatus } from './framing';
 import { EXERCISE_IMAGES } from './images';
 import { ui } from './ui';
+import { Safe, Ilustracion, useInsets } from './Safe';
 import { sonido } from './alarm';
 import type { Plan } from './Pantallas';
 
@@ -18,6 +19,7 @@ interface Resumen { nombre: string; reps: number; formScore: number; segundos: n
 
 export function Entrenamiento({ plan, motorListo, onSalir }: { plan: Plan; motorListo: boolean; onSalir: () => void }) {
   const { hasPermission, requestPermission } = useCameraPermission();
+  const ins = useInsets();
   const [camPos, setCamPos] = useState<'front' | 'back'>('front');
   const device = useCameraDevice(camPos);
 
@@ -139,10 +141,10 @@ export function Entrenamiento({ plan, motorListo, onSalir }: { plan: Plan; motor
   // ── Pantallas sin cámara ──
   if (fase === 'preparar') {
     return (
-      <View style={ui.fullDark}>
+      <Safe><ScrollView contentContainerStyle={[ui.fullDark, { paddingBottom: 32 }]}>
         <Text style={ui.sub}>Ejercicio {idx + 1} de {plan.pasos.length} · {plan.titulo}</Text>
         <Text style={ui.h1}>{e.nombre}</Text>
-        <Image source={EXERCISE_IMAGES[e.id]} style={ui.hero} resizeMode="contain" />
+        <View style={{ marginVertical: 12 }}><Ilustracion source={EXERCISE_IMAGES[e.id]!} margen={32} radio={16} /></View>
         <Text style={ui.body}>{e.descripcion}</Text>
         <Text style={[ui.sub, { marginTop: 8 }]}>{e.camara}</Text>
         <Text style={[ui.h2, { marginTop: 12 }]}>{hold ? `Mantén ${paso.segundos} segundos` : `${paso.reps} repeticiones`}</Text>
@@ -154,29 +156,29 @@ export function Entrenamiento({ plan, motorListo, onSalir }: { plan: Plan; motor
           </TouchableOpacity>
         )}
         <TouchableOpacity style={ui.btn2} onPress={salir}><Text style={ui.btn2Txt}>Salir</Text></TouchableOpacity>
-      </View>
+      </ScrollView></Safe>
     );
   }
 
   if (fase === 'descanso') {
     const sig = plan.pasos[idx + 1]!.ejercicio;
     return (
-      <View style={ui.fullDark}>
+      <Safe><ScrollView contentContainerStyle={[ui.fullDark, { paddingBottom: 32 }]}>
         <Text style={ui.h1}>Descanso</Text>
         <Text style={ui.bigNum}>{descanso}</Text>
         <Text style={ui.sub}>Siguiente:</Text>
         <Text style={ui.h2}>{sig.nombre}</Text>
-        <Image source={EXERCISE_IMAGES[sig.id]} style={ui.hero} resizeMode="contain" />
+        <View style={{ marginVertical: 12 }}><Ilustracion source={EXERCISE_IMAGES[sig.id]!} margen={32} radio={16} /></View>
         <TouchableOpacity style={ui.btn} onPress={saltarDescanso}><Text style={ui.btnTxt}>Saltar descanso</Text></TouchableOpacity>
         <TouchableOpacity style={ui.btn2} onPress={salir}><Text style={ui.btn2Txt}>Terminar entrenamiento</Text></TouchableOpacity>
-      </View>
+      </ScrollView></Safe>
     );
   }
 
   if (fase === 'final') {
     const total = resumenes.reduce((a, r) => a + (r.tipo === 'rep' ? r.reps : 0), 0);
     return (
-      <View style={ui.fullDark}>
+      <Safe><ScrollView contentContainerStyle={[ui.fullDark, { paddingBottom: 32 }]}>
         <Text style={ui.h1}>¡Entrenamiento completo! 🎉</Text>
         <Text style={ui.sub}>{plan.titulo}</Text>
         <View style={{ marginTop: 16 }}>
@@ -196,7 +198,7 @@ export function Entrenamiento({ plan, motorListo, onSalir }: { plan: Plan; motor
           </Text>
         )}
         <TouchableOpacity style={ui.btn} onPress={onSalir}><Text style={ui.btnTxt}>Volver al inicio</Text></TouchableOpacity>
-      </View>
+      </ScrollView></Safe>
     );
   }
 
@@ -213,7 +215,7 @@ export function Entrenamiento({ plan, motorListo, onSalir }: { plan: Plan; motor
     <View style={styles.container}>
       <NormalCameraView device={device} isActive cameraPosition={camPos} />
       <View style={styles.overlay}>
-        <View style={styles.topButtons}>
+        <View style={[styles.topButtons, { top: ins.top + 12 }]}>
           <TouchableOpacity style={styles.iconButton} onPress={() => setSonidoOn((v) => !v)}>
             <Text style={{ color: '#fff', fontSize: 22 }}>{sonidoOn ? '🔔' : '🔕'}</Text>
           </TouchableOpacity>
@@ -265,7 +267,7 @@ export function Entrenamiento({ plan, motorListo, onSalir }: { plan: Plan; motor
             {aviso !== '' && (
               <View style={styles.feedbackContainer}><Text style={styles.feedbackText}>{aviso}</Text></View>
             )}
-            <TouchableOpacity style={styles.stopButton} onPress={detener}>
+            <TouchableOpacity style={[styles.stopButton, { bottom: ins.bottom + 40 }]} onPress={detener}>
               <Text style={styles.stopButtonText}>Terminar este ejercicio</Text>
             </TouchableOpacity>
           </>

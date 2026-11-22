@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, ScrollView, FlatList, Image, Alert } from
 import { EJERCICIOS, MUSCLES, CIRCUITOS, porId, type Ejercicio, type Circuito, type MuscleId } from './exercises';
 import { EXERCISE_IMAGES } from './images';
 import { C, ui } from './ui';
+import { Ilustracion, Safe } from './Safe';
 import { alarmaDisponible, obtenerAlarma, programarAlarma, cancelarAlarma, type AlarmaConfig } from './alarm';
 
 export interface Paso { ejercicio: Ejercicio; reps: number; segundos: number }
@@ -22,7 +23,7 @@ const dosis = (e: Ejercicio) => (e.tipo === 'hold' ? `${e.segundos} s` : `${e.re
 function Tarjeta({ e, onPress }: { e: Ejercicio; onPress: () => void }) {
   return (
     <TouchableOpacity style={ui.card} onPress={onPress} activeOpacity={0.85}>
-      <Image source={EXERCISE_IMAGES[e.id]} style={ui.cardImg} resizeMode="contain" />
+      <Ilustracion source={EXERCISE_IMAGES[e.id]!} margen={24} />
       <View style={ui.cardBody}>
         <Text style={ui.h2}>{e.nombre}</Text>
         <Text style={ui.sub}>{e.dificultad} · {e.tipo === 'hold' ? 'Mantener ' : ''}{dosis(e)}</Text>
@@ -39,10 +40,10 @@ export function Detalle({ e, onBack, onStart }: { e: Ejercicio; onBack: () => vo
   const [seg, setSeg] = useState(e.segundos);
   const hold = e.tipo === 'hold';
   return (
-    <ScrollView style={ui.screen} contentContainerStyle={{ padding: 16 }}>
+    <Safe><ScrollView contentContainerStyle={{ padding: 16, paddingBottom: 40 }}>
       <TouchableOpacity onPress={onBack}><Text style={[ui.sub, { color: C.acc }]}>← Volver</Text></TouchableOpacity>
       <Text style={[ui.h1, { marginTop: 8 }]}>{e.nombre}</Text>
-      <Image source={EXERCISE_IMAGES[e.id]} style={ui.hero} resizeMode="contain" />
+      <View style={{ marginVertical: 12 }}><Ilustracion source={EXERCISE_IMAGES[e.id]!} margen={32} radio={16} /></View>
       <Text style={ui.body}>{e.descripcion}</Text>
       <Text style={[ui.label, { marginTop: 14 }]}>Músculos</Text>
       <View style={ui.rowWrap}>
@@ -65,7 +66,7 @@ export function Detalle({ e, onBack, onStart }: { e: Ejercicio; onBack: () => vo
       <TouchableOpacity style={ui.btn} onPress={() => onStart({ titulo: e.nombre, descanso: 0, pasos: [pasoDe(e, reps, seg)] })}>
         <Text style={ui.btnTxt}>Empezar</Text>
       </TouchableOpacity>
-    </ScrollView>
+    </ScrollView></Safe>
   );
 }
 

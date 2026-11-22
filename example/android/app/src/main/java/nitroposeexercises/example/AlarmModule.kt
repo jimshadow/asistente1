@@ -9,6 +9,8 @@ import android.media.ToneGenerator
 import android.os.Build
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.facebook.react.bridge.*
 import com.facebook.react.uimanager.ViewManager
 
@@ -59,6 +61,21 @@ class AlarmModule(private val rc: ReactApplicationContext) : ReactContextBaseJav
       if (act != null) ActivityCompat.requestPermissions(act, arrayOf(Manifest.permission.POST_NOTIFICATIONS), 9001)
     }
     promise.resolve(granted)
+  }
+
+  /** Márgenes del sistema (barra de estado / navegación) en dp, para no tapar la interfaz. */
+  @ReactMethod
+  fun insets(promise: Promise) {
+    var top = 0; var bottom = 0
+    try {
+      val w = ViewCompat.getRootWindowInsets(rc.currentActivity!!.window.decorView)
+      val i = w?.getInsets(WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.displayCutout())
+      if (i != null) { top = i.top; bottom = i.bottom }
+    } catch (e: Exception) { /* valores por defecto en JS */ }
+    val d = rc.resources.displayMetrics.density.toDouble()
+    val m = Arguments.createMap()
+    m.putDouble("top", top / d); m.putDouble("bottom", bottom / d)
+    promise.resolve(m)
   }
 
   private var tono: ToneGenerator? = null

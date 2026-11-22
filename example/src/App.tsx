@@ -7,6 +7,7 @@ import {
 } from './Pantallas';
 import { Entrenamiento } from './Entrenamiento';
 import { C, ui } from './ui';
+import { Safe } from './Safe';
 
 type Tab = 'ejercicios' | 'musculos' | 'circuitos' | 'alarma';
 const TABS: { id: Tab; icono: string; nombre: string }[] = [
@@ -47,10 +48,10 @@ export default function App() {
   }
 
   return (
-    <View style={{ flex: 1, backgroundColor: C.bg }}>
-      <StatusBar barStyle="light-content"/>
+    <Safe>
+      <StatusBar barStyle="light-content" />
       {errorMotor !== '' && (
-        <Text style={{ color: C.bad, padding: 8, paddingTop: 30 }}>No se pudo iniciar el motor de poses: {errorMotor}</Text>
+        <Text style={{ color: C.bad, padding: 8 }}>No se pudo iniciar el motor de poses: {errorMotor}</Text>
       )}
       <View style={{ flex: 1 }}>
         {tab === 'ejercicios' && <PantallaEjercicios onOpen={setDetalle} />}
@@ -66,6 +67,6 @@ export default function App() {
           </TouchableOpacity>
         ))}
       </View>
-    </View>
+    </Safe>
   );
 }
