@@ -37,6 +37,6 @@ export function Ilustracion({ source, margen = 32, radio = 0 }: { source: ImageS
   const w = Math.floor(width - margen);
   return (
     <Image source={source} resizeMode="contain"
-      style={{ width: w, height: Math.round(w / 1.6), backgroundColor: '#eef6f7', borderRadius: radio }} />
+      style={{ width: w, height: Math.round(w / 1.6), backgroundColor: '#ffffff', borderRadius: radio }} />
   );
 }

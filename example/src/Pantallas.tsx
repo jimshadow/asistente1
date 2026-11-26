@@ -124,7 +124,7 @@ export function PantallaCircuitos({ onStart }: { onStart: (p: Plan) => void }) {
                   const e = porId(i.id);
                   return (
                     <View key={n} style={[ui.row, { marginBottom: 6 }]}>
-                      <Image source={EXERCISE_IMAGES[e.id]} style={{ width: 80, height: 50, borderRadius: 8, backgroundColor: '#eef6f7' }} resizeMode="contain" />
+                      <Image source={EXERCISE_IMAGES[e.id]} style={{ width: 80, height: 50, borderRadius: 8, backgroundColor: '#ffffff' }} resizeMode="contain" />
                       <View style={{ marginLeft: 10, flex: 1 }}>
                         <Text style={ui.body}>{n + 1}. {e.nombre}</Text>
                         <Text style={ui.sub}>{i.segundos ? `${i.segundos} s` : `${i.reps} repeticiones`}</Text>
